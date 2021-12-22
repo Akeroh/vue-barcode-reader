@@ -1,7 +1,7 @@
 <template>
     <div class="scanner-container">
         <div v-show="!isLoading">
-            <video poster="data:image/gif,AAAA"     ></video>
+            <video poster="data:image/gif,AAAA" ref="scanner"></video>
             <div class="overlay-element"></div>
             <div class="laser"></div>
         </div>

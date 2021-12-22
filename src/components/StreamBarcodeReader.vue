@@ -1,7 +1,7 @@
 <template>
     <div class="scanner-container">
         <div v-show="!isLoading">
-            <video poster="data:image/gif,AAAA" ref="scanner"></video>
+            <video poster="data:image/gif,AAAA"     ></video>
             <div class="overlay-element"></div>
             <div class="laser"></div>
         </div>
@@ -43,9 +43,9 @@ export default {
     },
 
     methods: {
-        start() {
+        start(deviceId = undefined) {
             this.codeReader.decodeFromVideoDevice(
-                undefined,
+                deviceId,
                 this.$refs.scanner,
                 (result, err) => {
                     if (result) {
